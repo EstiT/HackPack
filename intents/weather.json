@@ -1,0 +1,130 @@
+{
+  "userSays": [
+    {
+      "id": "6d4b4f43-aa91-47df-9b11-a1daa6d12c30",
+      "data": [
+        {
+          "text": "weather forecast in "
+        },
+        {
+          "text": "San Francisco",
+          "alias": "geo-city",
+          "meta": "@sys.geo-city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "1a0378b2-c6e4-4bd3-8f93-193604b624bd",
+      "data": [
+        {
+          "text": "weather for "
+        },
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "832a5606-6c20-4033-8bef-d5172a5b316a",
+      "data": [
+        {
+          "text": "what is the weather "
+        },
+        {
+          "text": "today",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "46099f4e-9d76-49e8-9552-aeb7edc46fda",
+      "data": [
+        {
+          "text": "weather forecast"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "bc6e2016-f02c-4c1e-9992-c06339581d3b",
+      "data": [
+        {
+          "text": "What\u0027s the weather supposed to be"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7d1ca7b9-8331-4ab5-9192-ac62cafebf2a",
+      "data": [
+        {
+          "text": "What is the weather like"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "770fb186-edb9-48cb-98c9-3ce877cac73a",
+  "name": "weather",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@sys.date",
+          "name": "date",
+          "value": "$date",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.geo-city",
+          "name": "geo-city",
+          "value": "$geo-city",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": [
+            "Sorry I don\u0027t know the weather",
+            "I\u0027m not sure about the weather on $date",
+            "I don\u0027t know the weather for $date in $geo-city but I hope its good!"
+          ]
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}
